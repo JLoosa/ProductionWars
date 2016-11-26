@@ -1,0 +1,26 @@
+Core Mechanics:
+	- Split Players evenly into teams of 3+
+	- Ensure that each team has the same starting region
+		- Resources, Space, etc
+	- Create material regeneration mechanics to ensure an infinite supply of needed materials
+	- Create a system for randomly generating target production
+		- Should allow for crafting, mining, farming, woodcutting, and mob slaying/bounty
+		- Try to ensure that the crafting steps are reasonable, all recipes will have an assumed crafting time of .5 seconds per
+		- Resources such as gold and iron should have an assumed furnacing time of 1 second (this is do to the need for multiple furnaces)
+			- teams that use a low number of furnaces are only harming themself
+	- allow for players to put resources into increasing the production of their resources
+		- this will be needed for larger crafting tasks such making 500 jukeboxes, 350 pistons, etc
+		- resource production will scale using a formula similar to 1 + ( sqrt(x) / 2.5 )
+			- example scaling uses x to represent materials traded in and scales as follows
+				- 0 = 1x, 6.25 = 2x, 25 = 3x, 56.26 = 4x, etc
+				- Do to an inability to turn in an item partially, all values are rounded up
+				- Visual representation of graph for items turned in to resource production http://prntscr.com/dc3vhx
+					- the red graph is your effective production multiplier
+					- the blue graph is your next full production step (such as 1x, 2x, 3x, etc)
+		- base resource production speed will encourage investment into increasing resource production for medium+ projects
+	- timer for timing the teams and allowing for teams to finish first, second, third, or last
+		- per-player point payout will be based on their team's position at the end
+			- 1st = 10, 2nd = 5, 3rd = 2, other = 1 //Equivalent of a participation medal, may be removed
+	- allow players to turn in medals for in-game cosmetics and minor buffs
+		- cosmetics may be anything, to be considered
+		- buffs may not be added at all, but will include minor stuff such as walking up to 5% faster, or instantly regenerating a mined block (up to 1% chance)
